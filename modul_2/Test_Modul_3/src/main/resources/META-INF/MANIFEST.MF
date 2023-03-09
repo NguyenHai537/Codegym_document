@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: C:\Users\nguye\OneDrive\ドキュメント\Codegym\JWBD_EXAM
+ _C0922i1_NguyenThanhHai
+

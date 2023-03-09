@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>on_tap_3</title>
+</head>
+<body>
+<script>
+  function ArrMaxMinAVG(){
+    let arr = [1, 2, 5, 3, 4, 7, 9];
+    let minNum = arr[0];
+    let maxNum = arr[0];
+    let sumTotal = 0;
+    let sumAVG =0;
+    for ( let i=1 ; i<arr.length; i++){
+      if ( arr[i] < minNum){
+        minNum = arr[i] ;
+      }
+      if ( arr[i] > maxNum){
+         maxNum = arr[i];
+      }
+      sumTotal+=arr[i];
+
+    }
+    sumAVG= sumTotal / arr.length;
+    document.write("MaxNum: "+ maxNum + "<br>" + "MinNUm: " + minNum +"<br>" + "SumAVG: " + sumAVG +"<br>");
+
+  }
+ArrMaxMinAVG();
+  function ArrAddDeleteFix(){
+    let arr = [1, 2, 5, 3, 4, 7, 9];
+    let mid = parseInt(arr.length / 2);
+    arr.unshift(8);
+    arr.push(8);
+    arr.splice(mid,0,8)
+    document.write("Mảng sau khi thêm 8 là: "+arr+ "<br>");
+    for (let i=0; i<arr.length ; i++){
+      if ( arr[i]===3 && arr[i+1]===4){
+        arr.splice(i+1,0,8);
+      }
+    }
+    document.write("Mảng sau khi thêm 8 vào 3,4 là: " + arr + "<br>");
+    arr.pop();
+    arr.shift();
+    arr.splice(mid -1,1);
+    document.write("Mảng sau khi cắt là :" + arr + "<br>");
+    for (let i=0; i<arr.length ; i++){
+      if ( arr[i]===3 && arr[i+2]===4){
+        arr.splice(i+1,1);
+      }
+    }
+    document.write("Mảng sau khi cắt 8 giữa 3 và 4 là: " + arr);
+  }
+  ArrAddDeleteFix();
+
+</script>
+</body>
+</html>

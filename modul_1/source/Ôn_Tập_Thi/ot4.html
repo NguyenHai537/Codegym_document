@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On_tap_4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="480" height="240" style="background-color: yellow"></canvas>
+<script>
+  let Retangle = function (width,height){
+      this.width = width;
+      this.height = height;
+      this.getWidth = function(){
+          return this.width;
+      }
+      this.getHeight = function (){
+          return this.height;
+      }
+      this.setWidth = function (width){
+          this.width = width;
+      }
+      this.setHeight = function (height){
+          this.height = height;
+      }
+      this.drawRect = function (){
+          let c = document.getElementById("myCanvas");
+          let ctx = c.getContext("2d");
+          ctx.beginPath();
+          ctx.rect(20,30,this.getWidth(),this.getHeight());
+          ctx.fillStyle = "blue";
+          ctx.fill();
+          ctx.closePath();
+      }
+
+  }
+  let rect = new Retangle(100,50);
+  rect.setWidth(300);
+  rect.setHeight(150);
+  rect.drawRect();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On_tap_5</title>
+</head>
+<body>
+<canvas id="myCanvas" width="480" height="240" style="background-color: aqua"></canvas>
+<script>
+  let Cirle = function (radius){
+    this.radius = radius;
+    this.getRadius = function (){
+      return this.radius;
+    }
+    this.setRadius = function (radius){
+      this.radius = radius;
+    }
+    this.draw = function (){
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(150,150,this.getRadius(),0,Math.PI*2);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+  let cirle = new Cirle(10);
+  cirle.setRadius(50)
+  cirle.draw();
+</script>
+</body>
+</html>
